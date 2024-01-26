@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock-Paper-Scissors</title>
+        <link rel="stylesheet" href="rps.css"> 
+    </head>
+    <body>
+        <h1 class="title">Welcome to the game of rock paper scissors</h1>
+        <p style="text-align: center;">Choose one among the rock, paper, and scissor </p>
+        <div class="emojies">
+            <!--Rock Code-->
+            <button class="move" onclick=" playgame('rock');" onkeydown="keyhandle(event.key);">
+            <img src="rock-emoji.png" alt="Rock" height="100px" width="100px">
+            </button>
+
+
+            <!--Paper Code-->
+            <button class="move" onclick="playgame('paper'); " onkeydown="keyhandle(event.key);">
+            <img src="paper-emoji.png" alt="Paper" height="100px" width="100px">
+            </button>
+
+
+        <!--Scissor Code-->
+            <button class="move" onclick="playgame('scissors');" onkeydown="keyhandle(event.key);">
+            <img src="scissors-emoji.png" alt="Scissor" height="100px" width="100px">
+            </button>
+
+        </div>
+        <hr style="width : 80%; border-top: 3px solid white;">
+        <div style=" text-align: center;">
+            <h3>Moves :</h3>
+            <p class="js-moves"></p>
+            <h3>Result :</h3>
+            <p class="js-result"></p>
+            <h3>Scores :</h3>
+            <p class="display"></p>
+        </div>
+        
+
+        <!--Reset Button-->
+        <button class="Reset" onclick="score.wins=0;score.losses=0;score.ties=0; 
+        localStorage.removeItem('score');
+        updateScoreElements();" onkeydown="keyhandle(event.key);">Reset</button>
+
+
+        <!-- Auto play Button
+        <button class="Auto" onclick="">Auto Play</button> -->
+
+        <script src="rps.js"></script>
+       
+    </body>
+</html>     
